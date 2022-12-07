@@ -1,5 +1,5 @@
 {
-  "name": "billapp-backend",
+  "name": "billed-api",
   "version": "1.0.0",
   "description": "backend app for billapp",
   "main": "server.js",
@@ -7,8 +7,9 @@
   "license": "MIT",
   "scripts": {
     "test": "NODE_ENV=test sequelize-cli db:migrate && jest test -i tests/user.test.js --watch",
-    "run:dev": "NODE_ENV=development sequelize-cli db:migrate && node server.js",
-    "lint": "eslint ./"
+    "dev": "NODE_ENV=development sequelize-cli db:migrate && node server.js",
+    "lint": "eslint ./",
+    "start": "node server.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -37,5 +38,16 @@
     "setupFilesAfterEnv": [
       "./setupTests.js"
     ]
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Foxygene/Billed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Foxygene/Billed/issues"
+  },
+  "homepage": "https://github.com/Foxygene/Billed#readme"
 }

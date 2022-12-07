@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "npm run dev --workspace=billed-api & npm run dev --workspace=billed-web",
+    "test": "npm run test --workspace=billed-api --workspace=billed-web",
+    "test:api": "npm run test --workspace=billed-api",
+    "test:web": "npm run test --workspace=billed-web"
+  },
+  "name": "billed",
+  "workspaces": [
+    "packages/billed-api",
+    "packages/billed-web"
+  ]
+}
