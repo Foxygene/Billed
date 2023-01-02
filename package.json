@@ -3,7 +3,8 @@
     "dev": "npm run dev --workspace=billed-api & npm run dev --workspace=billed-web",
     "test": "npm run test --workspace=billed-api --workspace=billed-web",
     "test:api": "npm run test --workspace=billed-api",
-    "test:web": "npm run test --workspace=billed-web"
+    "test:web": "npm run test --workspace=billed-web",
+    "bills": "jest -- packages/billed-web/src/__tests__/Bills.js"
   },
   "name": "billed",
   "workspaces": [

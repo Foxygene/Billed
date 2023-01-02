@@ -1,6 +1,7 @@
 {
   "scripts": {
     "test": "jest --coverage --noStackTrace --silent",
+    "bills": "jest -- src/__tests__/Bills.js",
     "dev": "live-server"
   },
   "jest": {
