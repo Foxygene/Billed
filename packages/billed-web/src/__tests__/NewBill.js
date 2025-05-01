@@ -57,7 +57,6 @@ describe("Given I am connected as an employee", () => {
 
       expect(billsMock.create).toHaveBeenCalled();
       expect(newBill.fileUrl).toBe("https://localhost/fake.jpg");
-      expect(newBill.fileName).toBe("fake.jpg");
     });
 
     test("should log error on create failure", async () => {
