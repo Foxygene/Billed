@@ -17,9 +17,9 @@ export default () => {
                 <form class="form-signin" data-testid="form-employee">
                   <h2 class="h3 mb-3 font-weight-normal">Employé</h1>
                   <label for="inputEmail">Votre email</label>
-                  <input type="email" data-testid="employee-email-input" class="form-control" placeholder="johndoe@email.com" required autofocus value="employee@test.tld">
+                  <input type="email" data-testid="employee-email-input" class="form-control" placeholder="johndoe@email.com" required autofocus value="">
                   <label for="inputPassword">Mot de passe</label>
-                  <input type="password" data-testid="employee-password-input" class="form-control" placeholder="******" required value="employee">
+                  <input type="password" data-testid="employee-password-input" class="form-control" placeholder="******" required value="">
                   <button class="btn btn-lg btn-primary btn-block" data-testid="employee-login-button" style="background-color: #0E5AE5;" type="submit">Se connecter</button>
                 </form>
               </div>
@@ -31,9 +31,9 @@ export default () => {
                 <form class="form-signin" data-testid="form-admin">
                   <h2 class="h3 mb-3 font-weight-normal">Administration</h1>
                   <label for="inputEmail">Votre email</label>
-                  <input type="email" data-testid="admin-email-input" class="form-control" placeholder="johndoe@email.com" required autofocus value="admin@test.tld">
+                  <input type="email" data-testid="admin-email-input" class="form-control" placeholder="johndoe@email.com" required autofocus value="">
                   <label for="inputPassword">Mot de passe</label>
-                  <input type="password" data-testid="admin-password-input" class="form-control" placeholder="******" required value="admin">
+                  <input type="password" data-testid="admin-password-input" class="form-control" placeholder="******" required value="">
                   <button  type="submit" class="btn btn-lg btn-primary btn-block" data-testid="admin-login-button" style="background-color: #0E5AE5;">Se connecter</button>
                 </form>
               </div>
