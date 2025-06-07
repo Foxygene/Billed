@@ -1,9 +1,9 @@
-import VerticalLayout from './VerticalLayout.js';
-import ErrorPage from './ErrorPage.js';
-import LoadingPage from './LoadingPage.js';
-import { formatDate } from '../app/format.js';
+import VerticalLayout from "./VerticalLayout.js";
+import ErrorPage from "./ErrorPage.js";
+import LoadingPage from "./LoadingPage.js";
+import { formatDate } from "../app/format.js";
 
-import Actions from './Actions.js';
+import Actions from "./Actions.js";
 
 const row = (bill) => {
   return `
@@ -27,18 +27,18 @@ const rows = (data) => {
           const a = Date.parse(shotA.date);
           const b = Date.parse(shotB.date);
 
-          if (a < b) {
-            return 1;
-          }
           if (a > b) {
             return -1;
+          }
+          if (a < b) {
+            return 1;
           }
 
           return 0;
         })
         .map((bill) => row(bill))
-        .join('')
-    : '';
+        .join("")
+    : "";
 };
 
 export default ({ data: bills, loading, error }) => {

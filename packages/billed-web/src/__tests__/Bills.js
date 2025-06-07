@@ -30,15 +30,15 @@ describe("Given I am connected as an employee", () => {
       expect(windowIcon.classList.contains("active-icon")).toBe(true);
     });
 
-    test("Then bills should be ordered from earliest to latest", () => {
+    test("Then bills should be ordered from latest to earliest", () => {
       document.body.innerHTML = BillsUI({ data: bills });
       const dates = screen
         .getAllByText(
           /(([1-3]{1})?([0-9]{1})(\ )(Jan|Fév|Mar|Avr|Mai|Jui|Jui|Aoû|Sep|Oct|Nov|Déc).(\ )([0-9]{2}))/g
         )
         .map((a) => a.innerHTML);
-      const antiChrono = (a, b) => (a < b ? 1 : -1);
-      const datesSorted = [...dates].sort(antiChrono);
+      const chrono = (a, b) => (a > b ? -1 : 1);
+      const datesSorted = [...dates].sort(chrono);
       expect(dates).toEqual(datesSorted);
     });
 
